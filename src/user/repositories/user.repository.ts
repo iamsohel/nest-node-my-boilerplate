@@ -10,7 +10,6 @@ export class UserRepository extends Repository<User> {
     if (!user) {
       throw new NotFoundException();
     }
-
     return user;
   }
 }
