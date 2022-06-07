@@ -13,13 +13,9 @@ import { UpdateUserInput } from '../dtos/user-update-input.dto';
 
 @Injectable()
 export class UserService {
-  constructor(
-    private repository: UserRepository,
-  ) {
-  }
-  async createUser(
-    input: CreateUserInput,
-  ): Promise<UserOutput> {
+  constructor(private repository: UserRepository) {}
+  
+  async createUser(input: CreateUserInput): Promise<UserOutput> {
 
     const user = plainToClass(User, input);
 
