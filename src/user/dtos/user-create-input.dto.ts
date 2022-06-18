@@ -20,13 +20,13 @@ export class CreateUserInput {
   @IsOptional()
   @IsNotEmpty()
   @IsString()
-  name: string;
+  firstName: string;
 
-  @ApiProperty()
+  @ApiPropertyOptional()
+  @IsOptional()
   @IsNotEmpty()
-  @Length(6, 100)
-  @IsAlphanumeric()
-  username: string;
+  @IsString()
+  lastName: string;
 
   @ApiProperty()
   @IsNotEmpty()
@@ -35,18 +35,14 @@ export class CreateUserInput {
   password: string;
 
   @ApiProperty()
-  @IsArray()
-  @ArrayNotEmpty()
-  @IsEnum(ROLE, { each: true })
-  roles: ROLE[];
-
-  @ApiProperty()
   @IsNotEmpty()
   @IsEmail()
   @MaxLength(100)
   email: string;
 
   @ApiProperty()
-  @IsBoolean()
-  isAccountDisabled: boolean;
+  @IsArray()
+  @ArrayNotEmpty()
+  @IsEnum(ROLE, { each: true })
+  roles: ROLE[];
 }

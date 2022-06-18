@@ -14,21 +14,20 @@ import {
     id: number;
   
     @Column({ length: 100 })
-    name: string;
+    firstName: string;
+
+    @Column({ length: 100 })
+    lastName: string;
+
+    @Unique('email', ['email'])
+    @Column({ length: 200 })
+    email: string;
   
     @Column()
     password: string;
   
     @Column('simple-array')
     roles: string[];
-  
-    @Unique('ithacaId', ['ithacaId'])
-    @Column({ length: 200 })
-    ithacaId: string;
-  
-    @Unique('email', ['email'])
-    @Column({ length: 200 })
-    email: string;
   
     @CreateDateColumn({ name: 'createdAt', nullable: true })
     createdAt: Date;
