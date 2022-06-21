@@ -2,6 +2,8 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=iamsohel_nest-node-my-boilerplate&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=iamsohel_nest-node-my-boilerplate)
+
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
