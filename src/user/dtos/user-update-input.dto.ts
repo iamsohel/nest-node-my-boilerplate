@@ -13,7 +13,14 @@ export class UpdateUserInput {
   @IsNotEmpty()
   @MaxLength(100)
   @IsString()
-  name: string;
+  firstName: string;
+
+  @ApiPropertyOptional()
+  @IsOptional()
+  @IsNotEmpty()
+  @MaxLength(100)
+  @IsString()
+  lastName: string;
 
   @ApiPropertyOptional()
   @IsOptional()

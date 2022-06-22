@@ -10,11 +10,11 @@ export class UserOutput {
 
   @Expose()
   @ApiProperty()
-  name: string;
+  firstName: string;
 
   @Expose()
   @ApiProperty()
-  username: string;
+  lastName: string;
 
   @Expose()
   @ApiProperty({ example: [ROLE.USER] })
@@ -23,10 +23,6 @@ export class UserOutput {
   @Expose()
   @ApiProperty()
   email: string;
-
-  @Expose()
-  @ApiProperty()
-  isAccountDisabled: boolean;
 
   @Expose()
   @ApiProperty()
